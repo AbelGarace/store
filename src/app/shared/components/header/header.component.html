@@ -1,8 +1,11 @@
     <mat-toolbar color="primary">
-      <span>My Store</span>
-       
-      {{quantity$ | async | json}} - Quantity                 
-      {{total$ | async | json}} - Total
-      {{cart$ | async | json}} - Cart 
+      <a [routerLink]="['/']">
+        <span>My Store</span>
+      </a>
+      
+       <span class="spacer"></span>
+      <app-cart class="mouseHover" (click)="goToCheckOut()">
+
+      </app-cart>
       
     </mat-toolbar>

@@ -1,0 +1,6 @@
+<ng-container *ngIf="{total: total$ | async, quantity: quantity$ | async } as dataCart">
+    <ng-container *ngIf="dataCart.total">
+        {{dataCart.total | currency}}
+        <mat-icon matBadge="{{dataCart.quantity}}" matBadgeColor="warn">shopping_cart</mat-icon>
+    </ng-container>    
+</ng-container>
